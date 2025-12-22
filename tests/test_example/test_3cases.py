@@ -68,10 +68,10 @@ def test_map_raster_with_nan():
         cross_antimeridian=True,
     )
 
-    # la sortie ne doit PAS être entièrement NaN
+    # No full NaN since raster is build with partial NaN only
     assert not np.all(np.isnan(out["U10"].values))
 
-    # mais on s'attend à un minimum de NaN (zones masquées)
+    # check there are NaN in the output
     nan_ratio = np.isnan(out["U10"].values).mean()
     assert nan_ratio > 0.01
 
