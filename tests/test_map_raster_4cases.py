@@ -9,8 +9,9 @@ Comprehensive regression tests for map_raster covering all 4 cases:
 Uses fake_dataset and fake_ecmwf_0100_1h from tools_test (no I/O).
 """
 import numpy as np
+from tools_test import build_footprint, fake_dataset, fake_ecmwf_0100_1h
+
 from mapraster.main import map_raster
-from tools_test import fake_dataset, fake_ecmwf_0100_1h, build_footprint
 
 
 def test_no_antimeridian_no_nan():

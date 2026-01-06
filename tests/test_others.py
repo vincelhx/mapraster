@@ -1,7 +1,8 @@
-from mapraster.main import _get_image_dims, map_raster
 import numpy as np
 import xarray as xr
-from tools_test import fake_dataset, build_footprint, fake_ecmwf_0100_1h
+from tools_test import build_footprint, fake_dataset, fake_ecmwf_0100_1h
+
+from mapraster.main import _get_image_dims, map_raster
 
 
 def test_get_image_dims_ignore_pol():

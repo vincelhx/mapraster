@@ -1,7 +1,7 @@
 import numpy as np
+import rioxarray  # activate .rio accessor
 import xarray as xr
 from shapely.geometry import Polygon
-import rioxarray  # activate .rio accessor
 
 
 def fake_dataset(cross_antimeridian=False):
